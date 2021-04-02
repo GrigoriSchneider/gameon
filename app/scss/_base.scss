@@ -1,0 +1,44 @@
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    
+}
+input[type=text]{
+    box-sizing: border-box;
+}
+
+h1, p{
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+// COLORS
+
+$color-primary: #FE142F;
+$color-secondary: #232323;
+$color-tertiary:    #2ecc71;
+
+$color-grey: #f2f2f2;
+$color-btn-howitworks: #f6f6f6;
+$color-footer: #353535;
+
+
+// Fonts
+$font-primary: 'Roboto', sans-serif;
+
+// BREAK POINTS
+$ipad: 768px;
+$ipadpro: 1024px;
+$screen: 1366px;
+$bigscreen: 1600px;
+
+// Border
+$border-radius: 1.5rem;
+

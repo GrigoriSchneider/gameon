@@ -1,0 +1,297 @@
+
+.header{
+    @media only screen and (min-width: $ipad){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+    }
+
+    &__container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100vw;
+    margin-top: 30px;
+    @media only screen and (min-width: $ipad){
+        width: 250px;
+        margin-top: 0;
+    }
+    
+
+        &-logo{
+            margin-left: 30px;
+            img{
+                width: 103px;
+            }       
+        }
+
+        &-nav-btn{
+            margin-right: 30px;
+
+            @media only screen and (min-width: $ipad){
+                display: none;
+            }
+            a{
+                color: $color-primary;
+            }       
+        }
+    }
+
+    &__nav{
+        display: none;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: space-around;
+        height: 90vh;
+
+        font-size: 1.7rem;
+
+        @media only screen and (min-width: $ipad){
+            margin-right: 30px;
+            display: flex;
+            flex-flow: row;
+            justify-content: space-around;
+            height: auto;
+            width: 60%;
+            font-size: 18px;
+            
+        }
+        a{
+            color: $color-primary;
+            
+            @media only screen and (min-width: $ipad){
+                &.active{
+                    color: white;
+                    background: $color-primary;
+                    padding: 9px 15px;
+                    border-radius: .5rem;
+                }
+            }
+            
+        } 
+    }
+}
+
+
+
+////////////////////////////////////////////
+////////////////////////////////////////////
+.hero{
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 30px;
+    margin-right: 30px;
+
+    d
+    
+    &__content{
+        height: 200px;
+        display: flex;
+        justify-content: space-around;
+        flex-flow: column ;
+        h1{
+            font-size: 47px;
+            font-weight: 500;
+        }
+        p{
+            font-size: 13px;
+        }
+    }
+
+    &__img{
+        img{
+            width: 315px;
+            border-radius: .5rem;
+        }        
+    }
+
+    &__btn{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        border: none;
+        width: 140px;
+        height: 30px;
+        font-size: 14;
+        color: #fff;
+        background-color: $color-primary;
+        border-radius: .5rem;
+    }
+}
+////////////////////////////////////////////
+////////////////////////////////////////////
+.form{
+    display: none;
+    flex-direction: column;
+    font-family: sans-serif;
+    font-size: 14px;
+    border-radius: .5rem;
+    
+        
+
+    .close{
+        margin-top: 15px;
+        text-align: right;
+        color: white;
+    }
+
+    background-color: $color-secondary;
+
+    &__content{
+        margin-left: 30px;
+        margin-right: 30px;
+       
+    }
+
+    &__content-body{
+
+        height: 760px;
+        h5{
+            margin-top: 200px;
+            color: #fff;
+            font-size: 36px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+
+        // input icon positioning
+        .form-control{
+            position: relative;
+
+            
+            label{
+                display: inline-block;
+                margin-bottom: 5px;
+                color: #fff;
+            }
+            
+            .check, .warning{
+                position: absolute;
+                right: 15px;
+                top: 40px;
+            }
+
+           
+            // .error input{
+            //     border-color: cc71;
+            //     }
+            // }
+        }
+
+        // input field
+        .text-control{
+            width: 100%;
+            height: 50px;
+            border-radius: .5rem;
+            border: none;
+            //  
+
+            
+            
+        }
+        
+        small{
+            color:$color-primary;
+            visibility: hidden;
+        }
+    }
+
+    &__location{
+        font-size: 12px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-row: 1fr 1fr 1fr;
+    }
+}
+
+#locationsmall{
+    grid-column: 1/-1;
+    font-size: 14px;
+}
+
+// icon check & warning
+.check, .warning{
+    visibility: hidden;
+}
+
+.form__location.success .check,
+.form-control.success .check{
+    color: $color-tertiary;
+    visibility: visible;
+}
+.form-control.error input{
+    border: 2px $color-primary solid;
+}
+// error sign icon
+.form__location.error .warning,
+.form-control.error .warning{
+    color: $color-primary;
+    visibility: visible;
+}
+// error message small
+.form__location.error small,
+.form-control.error small{
+    color: $color-primary;
+    visibility: visible;
+}
+
+
+//////////////////////////////////////////
+// checkbox input
+.checkbox-input {
+    display: inline-block;
+    
+}
+.checkbox-icon{
+    color: $color-tertiary;
+    .checked{
+        display: none;
+    }
+
+    .unchecked{
+        display: inline-block;
+    }
+    
+}
+
+.form__location-block input:checked +  .form__location-block.checkbox-label.checkbox-icon.checked{
+    display: inline-block;
+}
+
+.form__location-block input:checked + .form__location-block.checkbox-label.checkbox-icon .unchecked{
+    display:none;
+}
+
+.signup__btn,
+.signupclose__btn{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border: none;
+    width: 140px;
+    height: 30px;
+    font-size: 14;
+    color: #fff;
+    background-color: $color-primary;
+    border-radius: .5rem;
+}
+
+.signupclose__btn{
+    margin-top: 150px;
+}
+////////////////////////////////////////////
+////////////////////////////////////////////
+footer{
+    font-size: 10px;
+    color: $color-primary;
+
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}

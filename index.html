@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet" />
+    <link rel="stylesheet" href="dist/style.css">
+
+    <title>Game On</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="header__container">
+            <div class="header__container-logo">
+                <img src="img/Logo.png" alt="Game On Logo">
+            </div>
+
+
+            <div class="header__container-nav-btn">
+                <a href="#" class="icon" id="header__container-nav-btn">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="header__nav" id="header__nav">
+
+            <a href="#" class="active"><span>Event Details</span></a>
+            <a href="#"><span>About Us</span></a>
+            <a href="#"><span>Contact</span></a>
+            <a href="#"><span>Past Events</span></a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero" id="hero">
+        <div class="hero__content">
+            <h1>
+                US Nationwide <br> Game-a-Thon
+            </h1>
+            <p>Do you live to game? Our next gaming event is now accepting
+                reservations for players, but spots are limited.</p>
+        </div>
+
+        <div class="hero__img">
+            <img src="img/bg_img.jpg" alt="">
+        </div>
+
+        <button class="hero__btn">
+            Sign Up Now
+        </button>
+
+    </div>
+
+    <!-- Sign up Form -->
+
+    <div class="form">
+        <div class="form__content">
+            <!-- close -->
+            <div class="close">
+                <a href="#"><i class="fas fa-times"></i></a>
+
+            </div>
+
+            <!--  -->
+            <div class="form__content-body">
+                <form action="index.html" id="form">
+                    <div class="form-control ">
+                        <label>First Name</label><br>
+                        <input class="text-control " type="text" id="first" name="first" minlength="2" /><br>
+                        <i class="fas fa-check-circle check"></i>
+                        <i class="fas fa-exclamation-circle warning"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-control ">
+                        <label>Last Name</label><br>
+                        <input class="text-control" type="text" id="last" name="last" minlength="2" /><br>
+                        <i class="fas fa-check-circle check"></i>
+                        <i class="fas fa-exclamation-circle warning"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label>Email</label><br>
+                        <input class="text-control" type="email" id="email" name="email" /><br>
+                        <i class="fas fa-check-circle check"></i>
+                        <i class="fas fa-exclamation-circle warning"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label>Birthdate</label><br>
+                        <input class="text-control" type="date" id="birthdate" name="birthdate" /><br>
+                        <i class="fas fa-check-circle check"></i>
+                        <i class="fas fa-exclamation-circle warning"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label>How many tournaments have you attended? </label><br>
+                        <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                        <i class="fas fa-check-circle check"></i>
+                        <i class="fas fa-exclamation-circle warning"></i>
+                        <small>Error message</small>
+                    </div>
+
+                    <p class="text-label">Which location?</p>
+                    <div class="form__location" id="form__location">
+
+                        <div class="form-control form__location-block">
+                            <input class="checkbox-input" type="radio" id="location1" name="location"
+                                value="New York" />
+                            <label class="checkbox-label" for="location1">
+                                <span class="checkbox-icon">
+                                    <i class="far fa-circle unchecked"></i>
+                                    <i class="far fa-dot-circle checked"></i>
+                                </span>
+                                New York</label>
+                        </div>
+
+
+
+                        <div class="form-control form__location-block">
+                            <input class="checkbox-input" type="radio" id="location2" name="location"
+                                value="San Francisco" />
+                            <label class="checkbox-label" for="location2">
+                                <span class="checkbox-icon">
+                                    <i class="far fa-circle unchecked"></i>
+                                    <i class="far fa-dot-circle checked"></i>
+                                </span>
+                                San Francisco</label>
+                        </div>
+
+
+
+                        <div class="form-control form__location-block">
+                            <input class="checkbox-input" type="radio" id="location3" name="location" value="Seattle" />
+                            <label class="checkbox-label" for="location3">
+                                <span class="checkbox-icon">
+                                    <i class="far fa-circle unchecked"></i>
+                                    <i class="far fa-dot-circle checked"></i>
+                                </span>
+                                Seattle</label>
+                        </div>
+
+
+                        <div class="form-control form__location-block">
+                            <input class="checkbox-input" type="radio" id="location4" name="location" value="Chicago" />
+                            <label class="checkbox-label" for="location4">
+                                <span class="checkbox-icon">
+                                    <i class="far fa-circle unchecked"></i>
+                                    <i class="far fa-dot-circle checked"></i>
+                                </span>
+                                Chicago</label>
+                        </div>
+
+
+
+                        <div class="form-control form__location-block">
+                            <input class="checkbox-input" type="radio" id="location5" name="location" value="Boston" />
+                            <label class="checkbox-label" for="location5">
+                                <span class="checkbox-icon">
+                                    <i class="far fa-circle unchecked"></i>
+                                    <i class="far fa-dot-circle checked"></i>
+                                </span>
+                                Boston</label>
+
+                        </div>
+
+
+                        <div class="form-control form__location-block">
+                            <input class="checkbox-input" type="radio" id="location6" name="location"
+                                value="Portland" />
+                            <label class="checkbox-label" for="location6">
+                                <span class="checkbox-icon">
+                                    <i class="far fa-circle unchecked"></i>
+                                    <i class="far fa-dot-circle checked"></i>
+                                </span>
+                                Portland</label>
+                        </div>
+
+
+                        <i class="fas fa-check-circle check"></i>
+                        <i class="fas fa-exclamation-circle warning"></i>
+                        <small id="locationsmall">Error message</small>
+                    </div>
+
+                    <div class="form-control">
+                        <input class="checkbox-input" type="checkbox" id="checkbox1" />
+                        <label class="checkbox2-label" for="checkbox1" required>
+                            <span class="checkbox-icon"></span>
+                            I have read and I agree to GameOn's terms and conditions.
+                        </label>
+                        <i class="fas fa-check-circle check"></i>
+                        <i class="fas fa-exclamation-circle warning"></i>
+                        <small>Error message</small>
+
+                        <br>
+                        <input class="checkbox-input" type="checkbox" id="checkbox2" />
+                        <label class="checkbox2-label" for="checkbox2">
+                            <span class="checkbox-icon"></span>
+                            Please sign me up to be notified about future events.
+                        </label>
+                        <br>
+                    </div>
+
+
+                    <button class="signup__btn">Go</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+        <p class="copyrights">
+            Copyright 2014 - 2021, GameOn Inc.
+        </p>
+    </footer>
+
+    <script src="app/js/script.js"></script>
+</body>
+
+</html>
