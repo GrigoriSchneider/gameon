@@ -29,6 +29,15 @@ const formLocation = document.getElementById('form__location');
 let successCount = 0;
 const formContentBody = document.querySelector('.form__content-body');
 
+// Error for form Validation
+let firstNameError = true;
+let lastNameError = true;
+let emailError = true;
+let birthdateError = true;
+let attendedError = true;
+let locationError = true;
+let termsConditionError = true;
+
 // open & close navigation mobile
 headerNavBtn.addEventListener('click', ($event) => {
     $event.preventDefault();
@@ -72,10 +81,6 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     checkInputs();
-    // successCount
-    // if (successCount = 7) {
-    //     successSubmitMessage();
-    // }
 });
 
 function checkInputs() {
@@ -102,7 +107,8 @@ function checkInputs() {
     } else {
         // add success class
         setSuccessFor(firstname);
-        return successCount++;
+        firstNameError = false;
+
     }
 
     // Lastname error
@@ -114,7 +120,8 @@ function checkInputs() {
     } else {
         // add success class
         setSuccessFor(lastname);
-        return successCount++;
+        lastNameError = false;
+
     }
 
     // Email error
@@ -126,7 +133,8 @@ function checkInputs() {
 
     } else {
         setSuccessFor(email);
-        return successCount++;
+        emailError = false;
+
     }
 
     // Birthdate error
@@ -135,7 +143,8 @@ function checkInputs() {
 
     } else {
         setSuccessFor(birthdate);
-        return successCount++;
+        birthdateError = false;
+
     }
 
     // quantaty error
@@ -144,7 +153,8 @@ function checkInputs() {
 
     } else {
         setSuccessFor(quantity);
-        return successCount++;
+        attendedError = false;
+
     }
 
     // // location error
@@ -157,7 +167,8 @@ function checkInputs() {
         setErrorForLocation('You must chose one option')
     } else {
         setSuccessForLocation(' ');
-        return successCount++;
+        locationError = false;
+
     }
 
     // Checkbox1 error // terms & condition
@@ -165,7 +176,11 @@ function checkInputs() {
         setErrorFor(checkbox1, 'You must check to agree to terms and conditions');
     } else {
         setSuccessFor(checkbox1);
-        return successCount++;
+        termsConditionError = false;
+
+
+        successSubmitMessage();
+
     }
 }
 
@@ -220,23 +235,42 @@ function isEmail(email) {
 
 // Successfunction HTML
 function successSubmitMessage() {
+
     console.log('funktion wird aufgerufen')
+    console.log(firstNameError);
+    console.log(lastNameError);
+    console.log(emailError);
+    console.log(birthdateError);
+    console.log(attendedError);
+    console.log(locationError);
+    console.log(termsConditionError);
 
 
-    formContentBody.innerHTML = '<h5>Thank you for submitting your registration details</h5>' +
-        '<button class="signupclose__btn">Close</button>';
+    // let emailError = true;
+    // let birthdateError = true;
+    // let attendedErro =true;
+    // let locationError = true;
+    // let termsConditionError = true;
 
-    const signUpCloseBtn = document.querySelector('.signupclose__btn');
-    // Form close signUpBtnClose
-    signUpCloseBtn.addEventListener('click', ($event) => {
-        $event.preventDefault();
-        if (form.style.display === 'flex') {
-            form.style.display = 'none';
-            hero.style.display = 'flex';
-        }
-        else {
-            form.style.display = 'none';
-        }
+    if (firstNameError || lastNameError || lastNameError || emailError || birthdateError || attendedError || locationError || termsConditionError == false) {
 
-    });
+        formContentBody.innerHTML = '<h5>Thank you for submitting your registration details</h5>' +
+            '<button class="signupclose__btn">Close</button>';
+
+        const signUpCloseBtn = document.querySelector('.signupclose__btn');
+        // Form close signUpBtnClose
+        signUpCloseBtn.addEventListener('click', ($event) => {
+            $event.preventDefault();
+            if (form.style.display === 'flex') {
+                form.style.display = 'none';
+                hero.style.display = 'flex';
+            }
+            else {
+                form.style.display = 'none';
+            }
+
+        });
+    } else {
+        return false;
+    }
 };

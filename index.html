@@ -76,7 +76,7 @@
 
             <!--  -->
             <div class="form__content-body">
-                <form action="index.html" id="form">
+                <form action="index.html" id="form" method="get" onsubmit="return checkInputs();">
                     <div class="form-control ">
                         <label>First Name</label><br>
                         <input class="text-control " type="text" id="first" name="first" minlength="2" /><br>
@@ -214,7 +214,7 @@
                     </div>
 
 
-                    <button class="signup__btn">Go</button>
+                    <button class="signup__btn" type="submit" value="Go">Go</button>
                 </form>
             </div>
         </div>
