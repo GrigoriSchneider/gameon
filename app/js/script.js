@@ -236,24 +236,11 @@ function isEmail(email) {
 // Successfunction HTML
 function successSubmitMessage() {
 
-    console.log('funktion wird aufgerufen')
-    console.log(firstNameError);
-    console.log(lastNameError);
-    console.log(emailError);
-    console.log(birthdateError);
-    console.log(attendedError);
-    console.log(locationError);
-    console.log(termsConditionError);
 
+    if (firstNameError || lastNameError || lastNameError || emailError || birthdateError || attendedError || locationError || termsConditionError) {
+        return false;
 
-    // let emailError = true;
-    // let birthdateError = true;
-    // let attendedErro =true;
-    // let locationError = true;
-    // let termsConditionError = true;
-
-    if (firstNameError || lastNameError || lastNameError || emailError || birthdateError || attendedError || locationError || termsConditionError == false) {
-
+    } else {
         formContentBody.innerHTML = '<h5>Thank you for submitting your registration details</h5>' +
             '<button class="signupclose__btn">Close</button>';
 
@@ -270,7 +257,5 @@ function successSubmitMessage() {
             }
 
         });
-    } else {
-        return false;
     }
 };
