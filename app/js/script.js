@@ -29,6 +29,8 @@ const formLocation = document.getElementById('form__location');
 let successCount = 0;
 const formContentBody = document.querySelector('.form__content-body');
 
+const regex = /^[a-zA-Z\s]+$/;
+
 // Error for form Validation
 let firstNameError = true;
 let lastNameError = true;
@@ -86,7 +88,7 @@ form.addEventListener('submit', (e) => {
 function checkInputs() {
     // get the values  from the inputs
     let firstnameValueLength = firstname.value.length;
-    let lastnameValue = lastname.value.trim();
+    // let lastnameValue = lastname.value.trim();
     let emailValue = email.value.trim();
     let birthdateValue = birthdate.value;
     let quantityValue = quantity.value;
@@ -100,24 +102,32 @@ function checkInputs() {
     const checkbox1Value = checkbox1.checked;
 
     // Firstname error
-    if (firstnameValueLength < 2) {
-        // show error
-        // add error class
+    if (firstname == "") {
+        setErrorFor(firstname, 'Please enter your name');
+    } else if (regex.test(firstname.value) === false) {
+        setErrorFor(firstname, 'Please enter valid name');
+    } else if (firstnameValueLength < 2) {
         setErrorFor(firstname, 'Please enter 2+ characters for name field');
-    } else {
+    }
+    else {
         // add success class
         setSuccessFor(firstname);
         firstNameError = false;
 
     }
 
-    // Lastname error
-    if (lastnameValue === '') {
-        // show error
-        // add error class
-        setErrorFor(lastname, 'Please enter 2+ characters for name field');
 
-    } else {
+
+
+    // Lastname error
+    if (lastname == "") {
+        setErrorFor(lastname, 'Please enter your lastname');
+    } else if (regex.test(lastname.value) === false) {
+        setErrorFor(lastname, 'Please enter valid name');
+    } else if (lastname.length < 2) {
+        setErrorFor(lastname, 'Please enter 2+ characters for name field');
+    }
+    else {
         // add success class
         setSuccessFor(lastname);
         lastNameError = false;
@@ -241,6 +251,10 @@ function successSubmitMessage() {
         return false;
 
     } else {
+        formContentBody.style.display = 'flex';
+        formContentBody.style.flexDirection = 'column';
+        formContentBody.style.justifyContent = 'center';
+
         formContentBody.innerHTML = '<h5>Thank you for submitting your registration details</h5>' +
             '<button class="signupclose__btn">Close</button>';
 
