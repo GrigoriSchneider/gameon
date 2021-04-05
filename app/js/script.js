@@ -256,7 +256,7 @@ function successSubmitMessage() {
         formContentBody.style.justifyContent = 'center';
 
         formContentBody.innerHTML = '<h5>Thank you for submitting your registration details</h5>' +
-            '<button class="signupclose__btn">Close</button>';
+            '<button class="signupclose__btn" onclick="setTimeout(function () { window.location.reload(); }, 2)">Close</button>';
 
         const signUpCloseBtn = document.querySelector('.signupclose__btn');
         // Form close signUpBtnClose
