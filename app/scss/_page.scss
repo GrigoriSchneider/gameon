@@ -241,29 +241,34 @@
 
 //////////////////////////////////////////
 // checkbox input
-.checkbox-input {
-    display: inline-block;
+// .checkbox-input {
+//     display: inline-block;
     
-}
-.checkbox-icon{
-    color: $color-tertiary;
-    .checked{
-        display: none;
-    }
+// }
+// .checkbox-icon{
+//     color: $color-tertiary;
+//     // .checked{
+//     //     // display: none;
+//     // }
 
-    .unchecked{
-        display: inline-block;
-    }
+//     .unchecked{
+//         display: inline-block;
+//     }
     
-}
+// }
 
-.form__location-block input:checked +  .form__location-block.checkbox-label.checkbox-icon.checked{
-    display: inline-block;
-}
+// .form__location-block input:checked +  .form__location-block.checkbox-label.checkbox-icon.checked::before{
+//     display: inline-block;
+// }
 
-.form__location-block input:checked + .form__location-block.checkbox-label.checkbox-icon .unchecked{
-    display:none;
-}
+// .form__location-block input:checked + .form__location-block.checkbox-label.checkbox-icon .unchecked::before{
+//     display: inline-block;
+// }
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////
 
 .signup__btn,
 .signupclose__btn{
